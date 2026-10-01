@@ -1,209 +1,115 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LTS — Languages &amp; technology</title>
-  <meta name="description" content="LTS sp. z o.o., Lublin: Smart Language School (English and Spanish online), custom web software and managed IT for businesses.">
-  <link rel="canonical" href="https://lts.org.pl/">
-  <meta name="theme-color" content="#FAFAF7">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lts.org.pl/">
-  <meta property="og:title" content="LTS — Languages &amp; technology">
-  <meta property="og:description" content="We teach foreign languages, build custom software and look after companies’ IT. One company, based in Lublin.">
-  <meta property="og:image" content="https://lts.org.pl/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_GB">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap">
-
-  <style>
-    :root {
-      --bg: #FAFAF7;
-      --surface: #FFFFFF;
-      --text: #111418;
-      --text-2: #2D3138;
-      --muted: #4A4F57;
-      --line: #DDDDD6;
-      --accent: #2448D8;
-      --display: 'Space Grotesk', 'Helvetica Neue', sans-serif;
-      --sans: 'IBM Plex Sans', 'Helvetica Neue', sans-serif;
-      --mono: 'IBM Plex Mono', ui-monospace, monospace;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 18px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--text); }
-    a:hover { color: var(--accent); }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-
-    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-    .site-header {
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 16px;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .logo {
-      display: flex; align-items: center; gap: 4px;
-      font-family: var(--display); font-weight: 700; font-size: 32px;
-      letter-spacing: -0.045em; line-height: 1;
-      text-decoration: none;
-    }
-    .logo span { padding-bottom: 3px; }
-    .logo svg path { stroke: var(--accent); }
-    .site-nav { display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 16px; }
-    .site-nav a { text-decoration: none; padding: 10px 0; }
-
-    .hero { padding: 120px 0 112px; display: flex; flex-direction: column; gap: 28px; }
-    .eyebrow { font-family: var(--mono); font-size: 14px; font-weight: 500; color: var(--muted); }
-    .hero h1 {
-      margin: 0;
-      font-family: var(--display); font-weight: 700;
-      font-size: clamp(48px, 8vw, 104px); line-height: 0.98; letter-spacing: -0.045em;
-      max-width: 14ch;
-    }
-    .lead { margin: 0; max-width: 40rem; font-size: 21px; color: var(--text-2); }
-
-    .cards { display: flex; flex-wrap: wrap; gap: 24px; padding-bottom: 120px; }
-    .card {
-      flex: 1 1 320px;
-      background: var(--surface); border: 1px solid var(--line);
-      padding: 40px;
-      display: flex; flex-direction: column; gap: 18px;
-      scroll-margin-top: 24px;
-    }
-    .card .label { font-family: var(--mono); font-size: 14px; font-weight: 500; color: var(--accent); }
-    .card h2 {
-      margin: 0;
-      font-family: var(--display); font-weight: 700;
-      font-size: 36px; line-height: 1.1; letter-spacing: -0.03em;
-    }
-    .card p { margin: 0; color: var(--text-2); }
-    .card .note { font-size: 16px; color: var(--muted); }
-    .card .stack { font-family: var(--mono); font-size: 15px; color: var(--muted); }
-    .card .more { font-weight: 500; font-size: 17px; margin-top: auto; padding: 10px 0; }
-
-    .contact {
-      padding: 80px 0 96px;
-      border-top: 1px solid var(--line);
-      display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between;
-    }
-    .contact h2 {
-      margin: 0;
-      font-family: var(--display); font-weight: 700;
-      font-size: 48px; line-height: 1; letter-spacing: -0.04em;
-    }
-    .contact address {
-      font-style: normal;
-      display: flex; flex-direction: column; gap: 8px;
-      font-size: 20px;
-    }
-    .contact address a { font-weight: 500; }
-    .contact .addr { color: var(--muted); }
-
-    .site-footer {
-      padding: 32px 0 48px;
-      border-top: 1px solid var(--line);
-      font-size: 13px; line-height: 1.7; color: var(--muted);
-    }
-
-    @media (max-width: 600px) {
-      body { font-size: 17px; }
-      .site-header { padding: 20px 0; }
-      .site-nav { gap: 0 20px; font-size: 15px; }
-      .hero { padding: 64px 0 72px; gap: 22px; }
-      .lead { font-size: 19px; }
-      .cards { gap: 16px; padding-bottom: 72px; }
-      .card { flex-basis: 100%; padding: 28px 24px; }
-      .card h2 { font-size: 30px; }
-      .contact { padding: 56px 0 64px; gap: 28px; }
-      .contact h2 { font-size: 40px; }
-      .contact address { font-size: 18px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LTS — Languages &amp; technology · Lublin, Poland</title>
+<meta name="description" content="LTS sp. z o.o. — foreign language courses (Smart Language School), custom software development and managed IT services for businesses. Lublin, Poland.">
+<link rel="canonical" href="https://lts.org.pl/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lts.org.pl/">
+<meta property="og:title" content="LTS — Languages &amp; technology">
+<meta property="og:description" content="Foreign language courses, custom software and managed IT services. Lublin, Poland.">
+<meta property="og:image" content="https://lts.org.pl/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111418">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#FAFAF7;--card:#FFFFFF;--ink:#111418;--text:#2D3138;--muted:#4A4F57;--line:#DDDDD6;--accent:#2448D8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}a:hover{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.display{font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;font-weight:700}
+.mono{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-weight:500;font-size:14px}
+header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 28px;padding:28px 0;border-bottom:1px solid var(--line)}
+.logo{height:36px;width:auto;display:block}
+.brand{color:var(--ink);display:block;padding:4px 0}
+nav{display:flex;flex-wrap:wrap;gap:4px 28px;font-size:16px}
+nav a{text-decoration:none;padding:10px 0}
+.hero{padding:120px 0 112px;display:flex;flex-direction:column;gap:28px}
+.hero .mono{color:var(--muted)}
+h1{margin:0;font-size:clamp(48px,8vw,104px);line-height:.98;letter-spacing:-.045em;max-width:14ch}
+.lead{margin:0;max-width:40rem;font-size:21px;color:var(--text)}
+.cards{display:flex;flex-wrap:wrap;gap:24px;padding-bottom:120px}
+.card{flex:1 1 320px;background:var(--card);border:1px solid var(--line);padding:40px;display:flex;flex-direction:column;gap:18px;scroll-margin-top:24px}
+.card .mono{color:var(--accent)}
+h2{margin:0;font-size:36px;line-height:1.1;letter-spacing:-.03em}
+.card p{margin:0;color:var(--text)}
+.card .small{font-size:16px;color:var(--muted)}
+.card .stack{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:15px;color:var(--muted)}
+.card a.more{font-weight:500;font-size:17px;margin-top:auto}
+.contact{padding:80px 0 96px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:32px 48px;justify-content:space-between}
+.contact h2{font-size:48px;line-height:1;letter-spacing:-.04em}
+.contact address{font-style:normal;display:flex;flex-direction:column;gap:8px;font-size:20px;min-width:260px}
+.contact address a{font-weight:500}
+.contact .muted{color:var(--muted)}
+footer{padding:32px 0 48px;border-top:1px solid var(--line);font-size:13px;line-height:1.7;color:var(--muted)}
+@media (max-width:600px){.hero{padding:72px 0 64px}.card{padding:28px}.cards{padding-bottom:72px}.contact{padding:56px 0 64px}}
+</style>
 </head>
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <header class="site-header">
-      <a class="logo" href="#top" aria-label="LTS — home">
-        <svg width="12" height="22" viewBox="0 0 36 64" aria-hidden="true"><path d="M30 6 L8 32 L30 58" fill="none" stroke-width="10" stroke-linecap="square"/></svg>
-        <span>lts</span>
-        <svg width="12" height="22" viewBox="0 0 36 64" aria-hidden="true"><path d="M6 6 L28 32 L6 58" fill="none" stroke-width="10" stroke-linecap="square"/></svg>
-      </a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="#languages">Languages</a>
-        <a href="#software">Software</a>
-        <a href="#it">IT services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<header>
+<a class="brand" href="#top" aria-label="LTS — home"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="-60 -728.0 2148 856" role="img" aria-label="LTS"><path d="M282.0,-620.0 L58.0,-300 L282.0,20.0 M1746.0,-620.0 L1970.0,-300 L1746.0,20.0" fill="none" stroke="var(--accent)" stroke-width="96" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="10"/><path d="M440,-700 L566,-700 L566,-190 Q566,-118 638,-118 L670,-118 L670,0 L620,0 Q440,0 440,-180 Z M944 0Q895 0 864.5 -30.5Q834 -61 834 -112V-392H710V-496H834V-650H960V-496H1096V-392H960V-134Q960 -104 988 -104H1084V0Z M1380 14Q1283 14 1221.0 -28.0Q1159 -70 1146 -148L1262 -178Q1269 -143 1285.5 -123.0Q1302 -103 1326.5 -94.5Q1351 -86 1380 -86Q1424 -86 1445.0 -101.5Q1466 -117 1466 -140Q1466 -163 1446.0 -175.5Q1426 -188 1382 -196L1354 -201Q1302 -211 1259.0 -228.5Q1216 -246 1190.0 -277.0Q1164 -308 1164 -357Q1164 -431 1218.0 -470.5Q1272 -510 1360 -510Q1443 -510 1498.0 -473.0Q1553 -436 1570 -376L1453 -340Q1445 -378 1420.5 -394.0Q1396 -410 1360 -410Q1324 -410 1305.0 -397.5Q1286 -385 1286 -363Q1286 -339 1306.0 -327.5Q1326 -316 1360 -310L1388 -305Q1444 -295 1489.5 -278.5Q1535 -262 1561.5 -231.5Q1588 -201 1588 -149Q1588 -71 1531.5 -28.5Q1475 14 1380 14Z" fill="currentColor"/></svg></a>
+<nav aria-label="Main">
+<a href="#languages">Languages</a>
+<a href="#software">Software</a>
+<a href="#it">IT services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <main>
-      <section id="top" class="hero">
-        <div class="eyebrow">LTS sp. z o.o. · Lublin, Poland</div>
-        <h1>Languages &amp;&nbsp;technology.</h1>
-        <p class="lead">We teach foreign languages, build custom software and look after companies’ IT. One company, based in Lublin.</p>
-      </section>
+<main>
+<section class="hero" id="top">
+<div class="mono">LTS sp. z o.o. · Lublin, Poland</div>
+<h1 class="display">Languages &amp;&nbsp;technology.</h1>
+<p class="lead">We teach foreign languages, build custom software and look after companies’ IT. One company, based in Lublin.</p>
+</section>
 
-      <section class="cards" aria-label="What we do">
-        <article id="languages" class="card">
-          <div class="label">01 / Languages</div>
-          <h2>Smart Language School</h2>
-          <p>English and Spanish courses since 2010 — founded in Kraśnik, now taught online for children, teenagers and adults, one-to-one or in small groups. Business and specialist courses, and exam preparation (8th-grade exam and matura).</p>
-          <p class="note">Led by Magdalena Cywińska, Vice-President of the Management Board</p>
-          <a class="more" href="http://www.smartschool.com.pl">smartschool.com.pl →</a>
-        </article>
-        <article id="software" class="card">
-          <div class="label">02 / Software</div>
-          <h2>Software house</h2>
-          <p>We design and build web applications — from modernising legacy systems to new products, integrations and data processing.</p>
-          <p class="stack">React · TypeScript · Node.js · MongoDB · Azure</p>
-        </article>
-        <article id="it" class="card">
-          <div class="label">03 / IT services</div>
-          <h2>Managed IT for businesses</h2>
-          <p>We take care of companies’ IT infrastructure — networks, servers and workstations — and advise on and supply computer hardware.</p>
-          <p class="stack">Networks · Servers · Hardware · Support</p>
-        </article>
-      </section>
+<section class="cards">
+<article class="card" id="languages">
+<div class="mono">01 / Languages</div>
+<h2 class="display">Smart Language School</h2>
+<p>English and Spanish courses since 2010 — founded in Kraśnik, now taught online for children, teenagers and adults, one-to-one or in small groups. Business and specialist courses, and exam preparation (8th-grade exam and matura).</p>
+<p class="small">Led by Magdalena Cywińska, Vice-President of the Management Board</p>
+<a class="more" href="https://smartschool.com.pl">smartschool.com.pl →</a>
+</article>
+<article class="card" id="software">
+<div class="mono">02 / Software</div>
+<h2 class="display">Software house</h2>
+<p>We design and build web applications — from modernising legacy systems to new products, integrations and data processing.</p>
+<p class="stack">React · TypeScript · Node.js · MongoDB · Azure</p>
+</article>
+<article class="card" id="it">
+<div class="mono">03 / IT services</div>
+<h2 class="display">Managed IT for businesses</h2>
+<p>We take care of companies’ IT infrastructure — networks, servers and workstations — and advise on and supply computer hardware.</p>
+<p class="stack">Networks · Servers · Hardware · Support</p>
+</article>
+</section>
 
-      <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <address>
-          <!-- TODO: contact e-mail -->
-          <a href="mailto:[contact]@lts.org.pl">[contact]@lts.org.pl</a>
-          <!-- TODO: phone, e.g. <a href="tel:+48...">+48 ...</a> -->
-          <div>[PHONE]</div>
-          <div class="addr">ul. [ADDRESS], [POSTCODE] Lublin, Poland</div>
-        </address>
-      </section>
-    </main>
+<section class="contact" id="contact">
+<h2 class="display">Contact</h2>
+<address>
+<a href="mailto:[EMAIL]@lts.org.pl">[EMAIL]@lts.org.pl</a>
+<span>[PHONE]</span>
+<span class="muted">ul. [ADDRESS], [POSTCODE] Lublin, Poland</span>
+</address>
+</section>
+</main>
 
-    <!-- TODO: fill in KSH art. 206 data; verify the court in the KRS extract -->
-    <footer class="site-footer">
-      LTS sp. z&nbsp;o.o. (limited liability company), registered office: ul. [ADDRESS], [POSTCODE] Lublin, Poland · District Court Lublin-Wschód in Lublin with its seat in Świdnik, 6th Commercial Division of the National Court Register · KRS [NUMBER] · NIP (Tax ID) [NIP] · REGON [REGON] · Share capital PLN [AMOUNT]
-    </footer>
+<footer>
+LTS sp. z&nbsp;o.o. (limited liability company), registered office: ul. [ADDRESS], [POSTCODE] Lublin, Poland · District Court Lublin-Wschód in Lublin with its seat in Świdnik, 6th Commercial Division of the National Court Register · KRS [NUMBER] · NIP (Tax ID) [NIP] · REGON [REGON] · Share capital PLN [AMOUNT]
+</footer>
 
-  </div>
+</div>
 </body>
 </html>
