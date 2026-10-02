@@ -18,6 +18,16 @@
 <meta property="og:image" content="https://lts.org.pl/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#111418">
+<script>
+// Default language follows the browser: Polish -> /, anything else -> /en/.
+// A choice made with the PL/EN switch is remembered; crawlers are never redirected.
+(function(){try{
+var saved=localStorage.getItem('lang');
+var bot=/bot|crawl|spider|slurp|facebookexternalhit|embedly|preview|lighthouse/i.test(navigator.userAgent);
+var nav=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();
+if(!bot&&saved!=='pl'&&(saved==='en'||nav.indexOf('pl')!==0))location.replace('en/'+location.hash);
+}catch(e){}})();
+</script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -121,5 +131,8 @@ LTS sp. z&nbsp;o.o. z siedzibą w Lublinie, al. Spółdzielczości Pracy 56, <sp
 </footer>
 
 </div>
+<script>
+document.querySelectorAll('.lang a').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('lang','en')}catch(e){}})});
+</script>
 </body>
 </html>
